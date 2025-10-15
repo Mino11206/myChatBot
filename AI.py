@@ -7,7 +7,7 @@ st.title("ChatBot du lịch thông minh:")
 os.environ["GRPC_VERBOSITY"] = "NONE"
 os.environ["GLOG_minloglevel"] = "2"
 
-gemini.configure(api_key="AIzaSyAYRPfEJBhxVhAVE8Xqbwd2sebPsOPSI_w")
+gemini.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = gemini.GenerativeModel("gemini-2.5-flash")
 
 query = st.text_input("Nhập vào câu hỏi của bạn: ", key = "query_input")
