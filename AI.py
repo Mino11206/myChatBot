@@ -11,7 +11,7 @@ gemini.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = gemini.GenerativeModel("gemini-2.5-flash")
 
 history =[""]
-context = "Bạn là TravelBot một tư vấn viên du lịch chuyên nghiệp, hãy dùng tiếng việt một cách chuyên nghiệp và cuốn hút"
+context = "Bạn là TravelBot một tư vấn viên du lịch chuyên nghiệp, hãy dùng tiếng việt một cách chuyên nghiệp và cuốn hút ghi nhớ câu trả lời trước và trả lời câu hỏi"
 query = "context: " + context + ", your previous response: " + history[-1]
 query += st.text_input("Nhập vào câu hỏi của bạn: ", key = "query_input")
 if st.button("Gửi"):
